@@ -43,56 +43,25 @@ Selected exercises from [PracticePython.org](https://www.practicepython.org/)
 
 #### Exercise 1
 
-Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
-between 2000 and 3200 (both included).
+Input the comma-separated integers and transform them into a list of integers.
+Print the number of even ints in the given list. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+Use a function of counting evens.
 
-The numbers obtained should be printed in a comma-separated sequence on a single line.
+        count_evens([2, 1, 2, 3, 4]) → 3
+        count_evens([2, 2, 0]) → 3
+        count_evens([1, 3, 5]) → 0
+
 
 #### Exercise 2
 
-Write a program which can compute the factorial of a given numbers.
-The results should be printed in a comma-separated sequence on a single line.
+Input the comma-separated integers and transform them into a list of integers.
+Return the "centered" average of an list of ints, which we'll say is the mean average of the values, except ignoring the largest and smallest values in the list. If there are multiple copies of the smallest value, ignore just one copy, and likewise for the largest value. Use int division to produce the final average. You may assume that the list is length 3 or more.
 
-Suppose the following input is supplied to the program:
-
-        8
-
-Then, the output should be:
-
-        40320
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
+centered_average([1, 2, 3, 4, 100]) → 3
+centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
+centered_average([-10, -4, -2, -4, -2, 0]) → -3
 
 #### Exercise 3
 
-With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
-
-Suppose the following input is supplied to the program:
-
-        8
-
-Then, the output should be:
-
-        {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
-Consider use dict()
-
-#### Exercise 4
-
-Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
-
-Suppose the following input is supplied to the program:
-
-        34,67,55,33,12,98
-
-Then, the output should be:
-
-        ['34', '67', '55', '33', '12', '98']
-        ('34', '67', '55', '33', '12', '98')
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
-tuple() method can convert list to tuple
+Input the comma-separated integers and transform them into a list of integers.
+Given a list of ints, return True if the list contains a 2 next to a 2 somewhere.
