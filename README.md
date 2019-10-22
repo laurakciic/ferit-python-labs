@@ -59,3 +59,6 @@ git push origin master
 After running this command all the changes imported from the original repository to 
 your local copy of the repository should be visible on your project's gitlab page.
 
+# Help, tips and tricks
+
+[This document](help/README.md) will be updated with help files, tips and tricks.
