@@ -27,16 +27,16 @@ class Asteroid(object):
     def __init__(self, screen):
         self.screen = screen
         self.sw, self.sh = screen.get_size()
-        size = random.randint(50,150)
-        self.w, self.h = (size, size)
+        self.radius = random.randint(20,60)
         self.init_random_position()
         self.dx, self.dy = 1,1
 
     def update(self):
-        self.rect = pygame.Rect(self.x - self.w/2, self.y-self.h/2, self.w, self.h)
+        #self.rect = pygame.Rect(self.x - self.w/2, self.y-self.h/2, self.w, self.h)
+        pass
 
     def draw(self):
-        pygame.draw.rect(self.screen, (66,66,66), self.rect)
+        pygame.draw.circle(self.screen, (33,33,33), (self.x, self.y), self.radius)
 
     def init_random_position(self):
         """
