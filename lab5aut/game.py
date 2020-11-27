@@ -17,7 +17,7 @@ def main():
     BLACK = (0,0,0)
     RED = (255,0,0)
     GREEN = (0,255,0)
-    WELCOME_DURATION = 3000
+    WELCOME_DURATION = 300
     ASTEROID_COUNT = 10
 
     BG = load_fig("spacebg1.jpg", SIZE)

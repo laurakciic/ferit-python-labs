@@ -27,13 +27,13 @@ class Asteroid(object):
     def __init__(self, screen):
         self.screen = screen
         self.sw, self.sh = screen.get_size()
-        self.radius = random.randint(20,60)
+        self.radius = random.randint(10,40)
         self.init_random_position()
-        self.dx, self.dy = 1,1
+        self.dx, self.dy = random.choice([-1,1]), random.choice([-1,1])
 
     def update(self):
         #self.rect = pygame.Rect(self.x - self.w/2, self.y-self.h/2, self.w, self.h)
-        pass
+        self.move()
 
     def draw(self):
         pygame.draw.circle(self.screen, (33,33,33), (self.x, self.y), self.radius)
@@ -42,7 +42,19 @@ class Asteroid(object):
         """
         Create x,y coordinates that are at least PLAYER_DEAD_ZONE pixels away
         from the player (center of the screen)."""
-        self.x = random.randint(0, self.sw)
-        self.y = random.randint(0, self.sh)
+        left = random.randint(self.radius, self.sw/2 - self.PLAYER_DEAD_ZONE)
+        right = random.randint(self.sw/2+self.PLAYER_DEAD_ZONE, self.sw - self.radius)
+        top = random.randint(self.radius, self.sh/2 - self.PLAYER_DEAD_ZONE)
+        bottom = random.randint(self.sh/2+self.PLAYER_DEAD_ZONE, self.sh - self.radius)
+        self.x = random.choice( [left, right] )
+        self.y = random.choice( [top, bottom] )
+
+    def move(self):
+        if self.x >= self.sw - self.radius or self.x <= self.radius:
+            self.dx *= -1
+        if self.y >= self.sh - self.radius or self.y <= self.radius:
+            self.dy *= -1
+        self.x = self.x + self.dx
+        self.y = self.y + self.dy
 
 
