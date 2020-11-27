@@ -1,28 +1,8 @@
 # ukljucivanje biblioteke pygame
 import pygame
 import random
-
-def center(size, fig):
-    figw = fig.get_rect()[2]
-    figh = fig.get_rect()[3]
-    w = size[0]
-    h = size[1]
-    return (w/2 - figw/2, h/2 - figh/2)
-
-def middle_x(size, fig, y):
-    figw = fig.get_rect()[2]
-    figh = fig.get_rect()[3]
-    w = size[0]
-    return (w/2 - figw/2, y - figh/2)
-
-def load_fig(name, size):
-    fig = pygame.image.load(name)
-    fig = pygame.transform.scale(fig, size)
-    return fig
-
-def render_text(text, size, font="Arial", color=(255,255,255)):
-    font = pygame.font.SysFont(font, size)
-    return font.render(text, False, color)
+from entities import Player, Asteroid
+from helpers import *
 
 
 def main():
@@ -37,9 +17,11 @@ def main():
     BLACK = (0,0,0)
     RED = (255,0,0)
     GREEN = (0,255,0)
-    WELCOME_DURATION = 2000
+    WELCOME_DURATION = 3000
+    ASTEROID_COUNT = 10
 
     BG = load_fig("spacebg1.jpg", SIZE)
+    SHIP = pygame.image.load("spaceship.png")
 
     #definiranje novog ekrana za igru
     screen = pygame.display.set_mode(SIZE)
@@ -48,6 +30,9 @@ def main():
     #definiranje sata za pracenje fps-a
     clock = pygame.time.Clock()
     welcome_text = render_text("Watch out for the Asteroids!", 96)
+
+    player = Player(screen, SHIP)
+    asteroids = [ Asteroid(screen) for i in range(ASTEROID_COUNT) ]
 
     state = "welcome"
     welcome_timeout = WELCOME_DURATION
@@ -80,6 +65,16 @@ def main():
         elif state == "game":
             screen.blit(BG, (0,0))
             screen.blit(render_text("Score: %d"%score,20), (20,20))
+
+            for asteroid in asteroids:
+                asteroid.update()
+                asteroid.draw()
+
+            player.update()
+            player.draw()
+
+
+
 
 
         
