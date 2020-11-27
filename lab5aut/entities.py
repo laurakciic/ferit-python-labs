@@ -1,5 +1,6 @@
 import pygame
 import random
+import math
 
 class Player(object):
     """Handles all the logic for the player object"""
@@ -10,8 +11,10 @@ class Player(object):
         self.w, self.h = (70, 100)
         self.x, self.y = self.sw/2, self.sh/2
         self.dx, self.dy = 1,1
-        self.angle = 0
-        self.d_angle = 1
+        self.dir = [0,0]
+        self.vel = 1
+        self.angle = 90
+        self.d_angle = 2
         self.image = image
         self.drawn = None
 
@@ -21,24 +24,37 @@ class Player(object):
 
     def draw(self):
         ship_img = pygame.transform.scale(self.image, (self.w, self.h))
-        ship_img = pygame.transform.rotate(ship_img, self.angle)
+        ship_img = pygame.transform.rotate(ship_img, -self.angle)
         self.rect = ship_img.get_rect(center = (self.x, self.y))
         self.drawn = self.screen.blit(ship_img, self.rect)
 
     def move(self):
-        #for event in pygame.event.get():
-            #if event.type == pygame.KEYDOWN:
-                #if event.key == pygame.K_a:
-                    #self.angle -= self.d_angle
-                #elif event.key == pygame.K_d:
-                    #self.angle += self.d_angle
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_a]:
-            self.angle -= self.d_angle
-        elif keys[pygame.K_d]:
-            self.angle += self.d_angle
 
+        if keys[pygame.K_a]:
+            self.angle += self.d_angle
+        elif keys[pygame.K_d]:
+            self.angle -= self.d_angle
         self.angle = self.angle % 360
+
+        angle = math.radians(self.angle) - math.pi/2
+
+        self.dir[0] = self.vel*math.cos(angle)
+        self.dir[1] = self.vel*math.sin(angle)
+
+        x1 = 100*math.cos(angle)
+        y1 = 100*math.sin(angle)
+
+        pygame.draw.circle(self.screen, (255,0,0), (int(self.x + x1), int(self.y + y1)), 3)
+
+        if keys[pygame.K_w]:
+            self.x += self.dir[0]
+            self.y += self.dir[1]
+        elif keys[pygame.K_s]:
+            self.x -= self.dir[0]
+            self.y -= self.dir[1]
+
+
 
 class Asteroid(object):
     """Handles all the logic for the player object"""
