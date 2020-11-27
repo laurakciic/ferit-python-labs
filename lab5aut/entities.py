@@ -10,15 +10,35 @@ class Player(object):
         self.w, self.h = (70, 100)
         self.x, self.y = self.sw/2, self.sh/2
         self.dx, self.dy = 1,1
+        self.angle = 0
+        self.d_angle = 1
         self.image = image
         self.drawn = None
 
     def update(self):
-        self.rect = pygame.Rect(self.x - self.w/2, self.y-self.h/2, self.w, self.h)
+        self.move()
+        #self.rect = pygame.Rect(self.x - self.w/2, self.y-self.h/2, self.w, self.h)
 
     def draw(self):
         ship_img = pygame.transform.scale(self.image, (self.w, self.h))
+        ship_img = pygame.transform.rotate(ship_img, self.angle)
+        self.rect = ship_img.get_rect(center = (self.x, self.y))
         self.drawn = self.screen.blit(ship_img, self.rect)
+
+    def move(self):
+        #for event in pygame.event.get():
+            #if event.type == pygame.KEYDOWN:
+                #if event.key == pygame.K_a:
+                    #self.angle -= self.d_angle
+                #elif event.key == pygame.K_d:
+                    #self.angle += self.d_angle
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_a]:
+            self.angle -= self.d_angle
+        elif keys[pygame.K_d]:
+            self.angle += self.d_angle
+
+        self.angle = self.angle % 360
 
 class Asteroid(object):
     """Handles all the logic for the player object"""
