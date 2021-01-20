@@ -141,7 +141,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 1: Admini mogu uređivati aplikaciju direktno iz ADMIN_DASH sučelja
 
 - S1-1 
-
   Kao SuperAdmin, kada pristupim ADMIN_DASH stranici, trebam moći
   uređivati korisnike i postaviti im Admin privilegije
 
@@ -155,7 +154,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     brisanja korisnika.
 
 - S1-2
-
   Kao Admin, kada pristupim ADMIN_DASH stranici, trebam moći
   uređivati korisnike i postaviti im Admin privilegije
 
@@ -170,7 +168,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     brisanja korisnika.
 
 - S1-3
-
   Kao Admin, kada pristupim ADMIN_DASH stranici, trebam moći uređivati podatke
   o svim Tribeovima
 
@@ -186,7 +183,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 2: Anon se može registrirati i prijaviti i urediti svoje podatke
 
 - S2-1
-
   Kao Anon, kada pristupim HOMEPAGE stranici, mogu registrirati novi korisnički
   račun, nakon čega me sustav redirecta nazad na HOMEPAGE
 
@@ -198,7 +194,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Anon je redirectan nazad na HOMEPAGE nakon kreiranja računa
 
 - S2-2 
-
   Kao Anon, kada pristupim HOMEPAGE stranici, mogu se prijaviti u aplikaciju,
   nakon čega me sustav redirect nazad na HOMEPAGE
 
@@ -210,7 +205,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Anon je redirectan nazad na HOMEPAGE nakon prijave
 
 - S2-3
-
   Kao User, iz bilo kojeg dijela aplikacije, mogu pristupiti EDIT_USER stranici
   i urediti svoje korisničke podatke
 
@@ -223,7 +217,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - User ne može promijeniti podatke drugog Usera
 
 - S2-4
-
   Kao User, kada pristupim EDIT_USER stranici, mogu postaviti svoj logo
   (avatar)
 
@@ -236,7 +229,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 3: User vidi Tribeove i može kreirati novi Tribe
 
 - S3.1
-
   Kao User, kada pristupim HOMEPAGE stranici, mogu kreirati novi Tribe
 
   Need: Tribe name, Tribe logo, genre
@@ -248,7 +240,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   implementaciju uploada logoa Tribea.
 
 - S3-2
-
   Kao User, kada pristupim HOMEPAGE stranici, mogu vidjeti postojeće Tribeove
 
   Acceptance criteria: 
@@ -256,7 +247,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Prikazan je i logo i ime Tribea
 
 - S3-3 
-
   Kao User, kada pristupim HOMEPAGE stranici, na popisu Tribeova vidim Tribeove
   razdvojene po tome jesam li Chieftain Tribea, jesam li Member, te ukoliko ne
   pripadam tom Tribeu
@@ -269,7 +259,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     Chieftain, pa Member, pa kojima ne pripada
 
 - S3-4
-
   Kao User, kada pristupim HOMEPAGE stranici, mogu se priključiti Tribeu čiji
   nisam Member
 
@@ -280,7 +269,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     Member
 
 - S3-5
-
   Kao User, kada pristupim HOMEPAGE stranici, mogu pristupiti TRIBE stranici za
   bilo koji Tribe
 
@@ -292,7 +280,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 4: Chieftain može uređivati svoj Tribe, ali ne može druge
 
 - S4-1
-
   Kao Chieftain, kada pristupim TRIBE stranici svog Tribea, mogu kreirati i
   brisati playliste
 
@@ -308,7 +295,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     smještena) 
   
 - S4-2
-
   Kao Chieftain, kada pristupim TRIBE stranici, mogu uređivati
   naziv i opis svake playliste
 
@@ -326,7 +312,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Vidljiv je popis svih Membera određenog Tribea
 
 - S4-4 
-
   Kao Chieftain, kada pristupim TRIBE stranici, mogu izbaciti
   Membera iz Tribea
 
@@ -339,7 +324,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 5: Member na TRIBE stranici
 
 - S5-1 
-
   Kao member, kada pristupim TRIBE stranici, vidim sadržaje unutar TRIBE
   stranice
 
@@ -350,14 +334,12 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 
 
 - S5-2 
-
   Kao member, kada pristupim TRIBE stranici, vidim da sam Member tog Tribea
 
   Acceptance criteria:
   - Member vidi tekst Joined i ikonicu kvačice na TRIBE stranici
 
 - S5-3
-
   Kao Member, kada pristupim TRIBE stranici, mogu napustiti Tribe
 
   Acceptance criteria:
@@ -367,7 +349,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - User više nije na popisu članova Tribea
 
 - S5-4
-
   Kao User, kada pristupim TRIBE stranici Tribea čiji nisam član ili koji sam
   napustio, mogu se ponovno učlaniti u taj Tribe
 
@@ -382,7 +363,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 6: Tribe Chatbox
 
 - S6-1 
-
   Kao Member, kada pristupim TRIBE stranici, vidim popis poruka u Chatboxu
   Tribea koje su pisali Memberi Tribea
 
@@ -392,7 +372,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     poruke i timestamp kada je kreirana
 
 - S6-2
-
   Kao Member, kada pristupim TRIBE stranici, mogu ostaviti poruku u Chatboxu
 
   Acceptance criteria:
@@ -401,7 +380,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Chatbox sadrži napisanu poruku
 
 - S6-3
-
   Kao Anyone, kada pristupim TRIBE stranici, poruke napisane u Chatboxu na toj
   TRIBE stranici vidim samo unutar te TRIBE stranice
 
@@ -411,7 +389,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     TRIBE stranici
 
 - S6-4
-
   Kao Chieftain, kada pristupim TRIBE stranici, mogu brisati poruke
   svih Membera iz Chatboxa mog Tribea
 
@@ -422,7 +399,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 
 
 - S6-5
-
   Kao Member, User ili Anon, kada pristupim TRIBE stranici, ne vidim opcije za brisanje poruka
   u Chatboxu i ne mogu ih moderirati
 
@@ -431,7 +407,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Direktan request na delete URL za poruku neće obrisati poruku iz baze
 
 - S6-6
-
   Kao Member ili User, kada pristupim TRIBE stranici, ne mogu brisati poruke u
   Chatboxu čak niti ako sam Chieftain nekog drugog Tribea
 
@@ -444,7 +419,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Direktan request na delete URL za poruku neće obrisati poruku iz baze
 
 - S6-7
-
   Kao Chieftain, kada pristupim TRIBE stranici, 
   za sve moje poruke u Chatboxu vidljivo je da ih je napisao Chieftain Tribea. 
 
@@ -462,7 +436,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 7: PLAYLIST stranica
 
 - S7-1
-
   Kao Member, kada pristupim TRIBE stranici, vidim sve playliste unutar Tribea
   i mogu im pristupiti
 
@@ -471,7 +444,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Klik vodi Membera na PLAYLIST stranicu
 
 - S7-2
-
   Kao Member, kada pristupim PLAYLIST stranici, vidim podatke o playlisti
 
   Acceptance criteria:
@@ -480,7 +452,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Ukoliko nema pjesama, piše poruka kako je playlista prazna
 
 - S7-3
-
   Kao Member, kada pristupim PLAYLIST stranici, mogu dodati novu pjesmu u
   playlistu
 
@@ -493,7 +464,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     unutar playliste
 
 - S7-4
-
   Kao Anyone, kada pristupim PLAYLIST stranici, vidim podatke o pjesmama u
   playlisti i mogu poslušati bilo koju pjesmu u popisu pjesama
 
@@ -505,7 +475,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     link u novom tabu
 
 - S7-5
-
   Kao Member, kada pristupim PLAYLIST stranici, mogu lajkati i unlikeati bilo koju
   pjesmu iz popisa i vidim za svaku pjesmu broj likeova
 
@@ -522,7 +491,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Tekst LIKE/UNLIKE tipki sadrži i broj lajkova na tu pjesmu
 
 - S7-6 
-
   Kao Member, kada pristupim PLAYLIST stranici, mogu vidjeti koliko pojedina
   pjesma ima komentara te mogu čitati te komentare
 
@@ -548,7 +516,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   
 
 - S7-7
-
   Kao Member, kada pristupim PLAYLIST stranici, mogu komentirati svaku pjesmu u 
   popisu pjesama
 
@@ -565,7 +532,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 
 
 - S7-8 
-
   Kao User ili Anon, kada pristupim PLAYLIST stranici, mogu vidjeti komentare
   na pjesme ali ne mogu komentirati
 
@@ -576,7 +542,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     komentiranje
 
 - S7-9 
-
   Kao User ili Anon, kada pristupim PLAYLIST stranici, mogu vidjeti broj
   lajkova za pjesmu, ali ne mogu lajkati
 
@@ -590,7 +555,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
 ## Epic 8: Moderiranje PLAYLIST stranice
 
 - S8-1
-
   Kao Admin ili Chieftain, kada pristupim PLAYLIST stranici, mogu obrisati
   svaku pjesmu u popisu
 
@@ -600,7 +564,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Pjesma se više ne pojavljuje u popisu pjesama
   
 - S8-2
-
   Kao Member, kada pristupim PLAYLIST stranici, mogu obrisati iz playliste
   pjesmu koju sam ja dodao, ali ne mogu obrisati pjesme koje su dodali drugi 
   Memberi
@@ -613,7 +576,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
     za brisanje
   
 - S8-3
-
   Kao Admin ili Chieftain, kada pristupim PLAYLIST stranici, mogu obrisati
   svaki komentar
 
@@ -622,7 +584,6 @@ potrebu za postojanje Tribea kao preduvjet ispunjenja storyja.
   - Klik na tipku briše komentar iz baze i uklanja ga iz popisa komentara
 
 - S8-4
-
   Kao Chieftain, kada pristupim PLAYLIST stranici, mogu brisati pjesme i
   komentare samo iz playliste koja je u mom Tribeu
 

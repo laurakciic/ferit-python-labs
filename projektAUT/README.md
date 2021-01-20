@@ -92,7 +92,6 @@ zdravo-razumski zaključiti.
 ## Epic 1: Ekrani
 
 - S1.1
-
   Kao igrač, kada pokrenem igru, trebam moći pokrenuti GAME ekran, pogledati
   highscoreove ili izaći iz igre
 
@@ -102,7 +101,6 @@ zdravo-razumski zaključiti.
   - klik na EXIT zatvara igru
 
 - S1.2
-
   Kao igrač, kada sam na GAME ekranu, trebam moći izići iz aktivne igre
   pritiskom ESC tipke
 
@@ -110,7 +108,6 @@ zdravo-razumski zaključiti.
   - pritisak ESC na tipkovnici vraća igrača na START ekran
 
 - S1.3
-
   Kao igrač, kada sam na HIGHSCORE ekranu, trebam moći izići iz ekrana
   pritiskom ESC tipke
 
@@ -120,7 +117,6 @@ zdravo-razumski zaključiti.
 ## Epic 2: Igrač i neprijatelji (GAME ekran)
 
 - S2.1
-
   Kao igrač, kada sam u aktivnoj igri, trebam moći pomicati ikonu igrača po
   ekranu korištenjem WASD tipaka
 
@@ -131,14 +127,12 @@ zdravo-razumski zaključiti.
   - D pomiče igrača desno za proizvoljno određeni broj piksela
 
 - S2.2
-
   Kao igrač, kada sam u aktivnoj igri, trebam moći pucati iz primarnog oružja
 
   Acceptance criteria:
   - Lijevi klik miša ispaljuje metak sa lokacije igrača prema lokaciji miša
 
 - S2.3
-
   Kao igrač, kada sam u aktivnoj igri, trebam vidjeti nišan na lokaciji miša
 
   Acceptance criteria:
@@ -146,7 +140,6 @@ zdravo-razumski zaključiti.
     miša
 
 - S2.4
-
   Kao igrač, kada ispalim metak, metak treba nestati kad iziđe izvan okvira
   ekrana
 
@@ -154,7 +147,6 @@ zdravo-razumski zaključiti.
   - Metak se briše iz liste metaka
 
 - S2.5
-
   Kao igrač, kada sam u aktivnoj igri, neprijatelji se kreću prema meni
 
   Acceptance criteria:
@@ -162,7 +154,6 @@ zdravo-razumski zaključiti.
   - čudovišta se kreću prema igraču
 
 - S2.6
-
   Kao igrač, kada sam u aktivnoj igri, trebam moći pucati na čudovišta,
   oštetiti ih i ubiti
 
@@ -172,7 +163,6 @@ zdravo-razumski zaključiti.
   - Čudovište se briše iz liste neprijatelja nakon što je ubijeno
 
 - S2.7
-
   Kao igrač, kada sam u aktivnoj igri, čudovišta se stvaraju izvan ekrana i
   kreću se prema meni  
 
@@ -185,7 +175,6 @@ zdravo-razumski zaključiti.
   nekom trenutku će ući u ekran. 
 
 - S2.8
-
   Kao igrač, kada sam u aktivnoj igri, čudovište me može oštetiti i ubiti kada
   mi se približi
 
@@ -194,16 +183,13 @@ zdravo-razumski zaključiti.
   - Igrač umire ako mu health padne na 0 ili manje
 
 - S2.9
-
   Kao igrač, kada me čudovište ubije, trebam se vratiti na START ekran 
 
 - S2.10
-
   Kao igrač, kada pogodim čudovište, trebam vidjeti animaciju da je metak
   pogodio čudovište
 
 - S2.11
-
   Kao igrač, kada čudovište ošteti mene, trebam vidjeti animaciju da me je
   oštetilo
 
@@ -211,39 +197,34 @@ zdravo-razumski zaključiti.
 ## Epic 3: GAME UI
 
 - S3.1
-
   Kao igrač, želim vidjeti koliko čudovišta ima u igri i koliko sam ih ubio
 
   Acceptance criteria:
   - Broj čudovišta prikazan je na ekranu u formatu (BROJ_UBIJEN/UKUPAN_BROJ)
 
 - S3.2
-
   Kao igrač, želim vidjeti koliko healtha imam
 
 ## Epic 4: Waves
 
 - S3.1
-
   Kao igrač, čudovišta me trebaju napadati u valovima
 
   Acceptance criteria:
   - kada igrač ubije sva čudovišta, pokreće se novi val sa više čudovišta
+  - sa svakim valom čudovištima raste health i brzina udaranja igrača
   - nema ograničenja na broj valova
 
 - S3.2 
-
   Kao igrač, želim vidjeti na kojem sam trenutno valu
 
   Acceptance criteria:
   - Na ekranu je ispisano na kojem je igrač trenutno valu
 
 - S3.3 
-
   Kao igrač, želim da između valova bude odbrojavanje od 3 sekunde
 
 - S3.4
-
   Kao igrač, kada me čudovišta ubiju, moj rezultat se treba upisati u
   HIGHSCORES i treba biti dostupan i nakon restarta igre
 
@@ -260,7 +241,6 @@ zdravo-razumski zaključiti.
 ## Epic 4: Granate
 
 - S4.1 
-
   Kao igrač, tijekom igre trebam moći baciti granatu lijevim klikom miša
 
   Acceptance criteria:
@@ -270,15 +250,13 @@ zdravo-razumski zaključiti.
   - Kada dođe na mjesto gdje je bio pokazivač, eksplodira (animacija)
 
 - S4.2
-
   Kao igrač, kada bacim granatu i ona eksplodira, treba oštetiti čudovišta u
   određenom radijusu
 
   Acceptance criteria:
   - Eksplozija granate smanjuje health čudovištima u radijusu eksplozije
   
-- S4.2
-
+- S4.3
   Kao igrač, kada bacim granatu i ona eksplodira, treba oštetiti i mene ako sam u
   radijusu eksplozije
 
