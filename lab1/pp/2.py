@@ -4,7 +4,9 @@
 # Hint: how does an even / odd number react differently when divided by 2?
 
 num = int(input("Unesi broj: "))
-if num % 2 == 0:
-    print("Paran")
+if num % 4 == 0:
+    print("Broj je visekratnik od 4")
+elif  num % 2 == 0:
+    print("paran")
 else:
-    print("njeparan")
+    print("NJEPARAN WIII")
