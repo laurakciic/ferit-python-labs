@@ -1,4 +1,5 @@
-# GIT SYNTAX
+# GIT TUTOR 
+# SYNTAX
 
 #### git status
 - displays the state of the working directory and the staging area 
