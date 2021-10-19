@@ -1,4 +1,4 @@
-# Software Engineering Labs 2019/2020
+# Software Engineering Labs 2020/2021
 
 # Author: WRITE YOUR FULL NAME HERE
 
@@ -17,7 +17,7 @@ git config user.email "YOUR_EMAIL@ADDRESS.com"
 - Commit the README.md file to the repo with your name and push to
   origin/master
 - Add user `hleventic` with a Reporter role and no expiration date
-- Go to [Merlin Gitlab repozitoriji activity](https://moodle.srce.hr/2020-2021/mod/data/view.php?d=1871) and 
+- Go to [Merlin Gitlab repozitoriji activity](https://moodle.srce.hr/2021-2022/mod/data/view.php?d=2152891) and 
   click on **Add Entry**, add the URL of the forked repo on your GitLab
   account.
 
