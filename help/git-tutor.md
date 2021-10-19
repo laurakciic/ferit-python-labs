@@ -31,3 +31,13 @@ test
 - used to set Git configuration values on a global or local project level
 - postavlja razne konfiguracije poput username i sl.
 
+#### git pull
+- pulls request that was added remotely
+- povlači promjene s udaljenog repozitorija na naš lokalni repozitorij
+
+```
+git pull origin master
+```
+
+gdje `origin`predstavlja naziv udaljenog repozitorija, a `master` naziv brancha
+
