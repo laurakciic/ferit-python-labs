@@ -1,6 +1,7 @@
-# Software Engineering Labs 2020/2021
+# Software Engineering Labs 2021/2022
 
 # Author: Laura Kovačić
+
 # Setup
 
 - Fork this repo
