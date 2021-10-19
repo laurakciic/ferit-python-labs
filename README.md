@@ -1,7 +1,6 @@
 # Software Engineering Labs 2020/2021
 
-# Author: WRITE YOUR FULL NAME HERE
-
+# Author: Laura Kovačić
 # Setup
 
 - Fork this repo
