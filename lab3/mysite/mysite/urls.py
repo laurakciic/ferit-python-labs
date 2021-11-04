@@ -20,4 +20,8 @@ import polls.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('helloworld', polls.views.index, name = "hello"),
+    path('welcome', polls.views.welcome, name = "welcome"),
+    path('kovacic', polls.views.kovacic, name = "kovacic"),
 ]
+
+# http://127.0.0.1:8000/helloworld
