@@ -14,14 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 import polls.views
 
 urlpatterns = [
+    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('helloworld', polls.views.index, name = "hello"),
     path('welcome', polls.views.welcome, name = "welcome"),
     path('kovacic', polls.views.kovacic, name = "kovacic"),
+    path('', polls.views.welcome, name = "root"),
+
 ]
 
 # http://127.0.0.1:8000/helloworld
