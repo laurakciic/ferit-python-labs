@@ -67,3 +67,49 @@
   543  history
 (django)
 
+
+
+# novi terminal
+501  cd lab5/
+  502  source django/Scripts/activate
+  503  cd myimgur/
+  504  python manage.py migrate
+  505  git status
+  506  git add db.sqlite3
+  507  python manage.py createsuperuser
+  508  winpty python manage.py createsuperuser
+  509  git status
+  510  git add db.sqlite3
+  511  git status
+  512  git commit -m "apply migrations and create superuser"
+  513  python manage.py startapp images
+  514  git add *
+  515  git status
+  516  git commit -m "myimgur inital"
+  517  git add *
+  518  git status
+  519  git commit -m "add html basic implementation"
+  520  git push
+  521  git add *
+  522  git status
+  523  git commit -m "add css.style"
+  524  git push
+  525  git add *
+  526  git status
+  527  git commit -m "add base template"
+  528  git push
+  529  python manage.py makemigrations
+  530  git status
+  531  python manage.py migrate
+  532  git status
+  533  git diff db.sqlite3
+  534  git add *
+  535  git commit -m "add Image and Comment models"
+  536  git push
+  537  git add *
+  538  git commit -m "add image urls and comments"
+  539  git push
+  540  git add *
+  541  git commit -m "add detail.html and other"
+  542  history
+
