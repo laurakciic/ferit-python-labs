@@ -48,3 +48,22 @@
   532  history
 (django)
 
+ 533  git status
+  534  git add lab5/README.md
+  535  git commit -m "add git commands and their explanations to README.md"
+  536  clear
+  537  pip freeze
+  # ispisuje verzije paketa na ekran
+
+  # udemo u dir gdje zelimo napraviti requirements.txt file 
+  538  cd lab5
+
+  # ispis potrebnih paketa u requirements.txt
+  539  pip freeze > requirements.txt
+  540  ls
+
+  # instalacija potrebnih paketa iz requirements.txt filea
+  542  pip install -r requirements.txt
+  543  history
+(django)
+
