@@ -1,16 +1,11 @@
-{% load static %}
+{% extends 'images/base.html' %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'images/style.css' %}">
-    </head>
-    <body>
-        <h1>My imgur</h1>
+{% block content %}
+    <h1>My imgur</h1>
 
-        <p>pa ovo radi!</p> 
-        <p>čudo</p>
+    <p>pa ovo radi!</p> 
+    <p>čudo</p>
 
-        <a href="/about-us">O nama</a>
-    </body>
-</html>
+    <a href="/about-us">O nama</a>
+{% endblock %}
 

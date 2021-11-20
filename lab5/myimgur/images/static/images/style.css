@@ -5,3 +5,19 @@ h1 {
 a {
     color: red; 
 }
+
+.footer {
+    position: fixed; 
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+
+.page-header h1 {
+    font-size: 1.5em;
+    width: auto;
+    padding-right: 10px;
+    display: inline-block;
+}
