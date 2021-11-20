@@ -21,3 +21,14 @@ a {
     padding-right: 10px;
     display: inline-block;
 }
+
+.image {
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
