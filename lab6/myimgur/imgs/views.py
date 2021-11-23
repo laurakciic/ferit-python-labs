@@ -37,6 +37,18 @@ def post_comment(request, image_id):
     # redirecta na root aplikacije
     return HttpResponseRedirect(reverse('detail', args=(image.id,)))
 
+def upvote(request, image_id):
+    image = get_object_or_404(Image, pk=image_id)
+    image.upvotes += 1
+    image.save()
+    return HttpResponseRedirect(reverse('detail', args=(image.id,)))
+
+def downvote(request, image_id):
+    image = get_object_or_404(Image, pk=image_id)
+    image.downvotes += 1
+    image.save()
+    return HttpResponseRedirect(reverse('detail', args=(image.id,)))
+
 def about(request):
     context = {}
     return render(request, 'imgs/about.html', context)

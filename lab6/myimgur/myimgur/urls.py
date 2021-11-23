@@ -24,5 +24,7 @@ urlpatterns = [
     path('slikice/<int:image_id>', views.detail, name="detail"),
     path('comments', views.comments, name = "comments"),
     path('post-comment/<int:image_id>', views.post_comment, name = "post_comment"),
+    path('upvote/<int:image_id>', views.upvote, name='upvote'),
+    path('downvote/<int:image_id>', views.downvote, name='downvote'),
     path('', views.index, name='root'),
 ]
