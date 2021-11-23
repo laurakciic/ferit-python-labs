@@ -1,0 +1,19 @@
+{% extends 'imgs/base.html' %}
+
+{% block content %}
+<h1>My Imgur</h1>
+{% if all_images %}
+    {% for image in all_images %}
+        <div class="index--thumb">
+            <h2>{{ image.title }}</h2>
+            <img src="{{ image.url }}" alt="">
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No images in database!</p>
+{% endif %}
+{% endblock %}
+
+
+
+

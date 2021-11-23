@@ -1,0 +1,22 @@
+{% extends 'imgs/base.html' %}
+
+{% block content %}
+{% if image %}
+    <h1>{{ image.title }}</h1>
+    <div>
+        <img src="{{ image.url }}" alt="">
+    </div>
+    <div>
+        {% for comment in comments %}
+            <p><strong>{{ comment.nick }}</strong></p>
+            <p>{{ comment.text }}</p>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>No images in database!</p>
+{% endif %}
+{% endblock %}
+
+
+
+
