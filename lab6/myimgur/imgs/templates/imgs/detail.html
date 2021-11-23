@@ -11,6 +11,22 @@
             <p><strong>{{ comment.nick }}</strong></p>
             <p>{{ comment.text }}</p>
         {% endfor %}
+        <div>
+            <h3>Post comment!</h3>
+            <form action="{% url 'post_comment' image.id %}" method="post">
+                <!-- potrebno za django da prihvati formu -->
+                {% csrf_token %}
+                <p>
+                    <label for="comment_nick">Nick: </label> <br>
+                    <input type="text" name="nick" id="comment_nick">
+                </p>
+                <p>
+                    <label for="comment_text">Comment: </label> <br>
+                    <input type="text" name="text" id="comment_text">
+                </p>
+                <input type="submit" value="Post comment">
+            </form>
+        </div>
     </div>
 {% else %}
     <p>No images in database!</p>

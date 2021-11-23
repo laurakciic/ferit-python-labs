@@ -23,5 +23,6 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('slikice/<int:image_id>', views.detail, name="detail"),
     path('comments', views.comments, name = "comments"),
+    path('post-comment/<int:image_id>', views.post_comment, name = "post_comment"),
     path('', views.index, name='root'),
 ]
