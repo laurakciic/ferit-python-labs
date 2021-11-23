@@ -15,8 +15,17 @@ def detail(request, image_id):
     context = {
         'image': image,
         'comments': image.comment_set.all()
+        # lista svih komentara te image
     }
     return render(request, 'imgs/detail.html', context)
+
+def comments(request):
+    comments = Comment.objects.order_by('nick')
+    context = {
+        'comments': comments
+    }
+    return render(request, 'imgs/comments.html', context)
+
 
 def about(request):
     context = {}

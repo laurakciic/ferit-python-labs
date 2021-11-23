@@ -5,7 +5,7 @@
 {% if all_images %}
     {% for image in all_images %}
         <div class="index--thumb">
-            <h2>{{ image.title }}</h2>
+            <h2><a href="{% url 'detail' image.id %}">{{ image.title }}</a></h2>
             <img src="{{ image.url }}" alt="">
         </div>
     {% endfor %}

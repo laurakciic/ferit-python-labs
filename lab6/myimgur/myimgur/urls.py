@@ -21,6 +21,7 @@ from imgs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about', views.about, name="about"),
-    path('images/<int:image_id>', views.detail, name="detail"),
+    path('slikice/<int:image_id>', views.detail, name="detail"),
+    path('comments', views.comments, name = "comments"),
     path('', views.index, name='root'),
 ]

@@ -6,3 +6,8 @@ h1 {
     width: 200px;
     height: auto;
 }
+
+.img--tiny{
+    height: 100px;
+    width: 100px;
+}

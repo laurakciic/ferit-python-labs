@@ -1,0 +1,28 @@
+{% extends 'imgs/base.html' %}
+
+{% block content %}
+<h1>My Imgur</h1>
+{% if comments %}
+    {% for comment in comments %}
+        <div class="">
+            <p><strong>{{ comment.nick }}</strong></p>
+            <p>{{ comment.text }}</p>
+            <p>
+                <small>
+                    Komentar na:
+                    <a href="{% url 'detail' comment.image.id %}">
+                        {{ comment.image.title }}
+                    </a> od {{ comment.image.pub_date }}
+                    <img src="{{ comment.image.url }}" class="img--tiny" alt="">
+                </small>
+            </p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No images in database!</p>
+{% endif %}
+{% endblock %}
+
+
+
+
