@@ -5,7 +5,23 @@
   <div class="row">
     <div class="col-md-6">
       <div class="date">
-        {{ image.pub_date }}
+        {{ image.pub_date }};
+
+        <div>
+          <form action="{% url 'app:upvote' image.id %}" method="post" role="form" class="form-inline float-left">
+            {% csrf_token %}
+            <input type="submit" value="+1">
+          </form>
+          <span class="vote-score float-left">{{ image.votes }}</span>
+          <form action="{% url 'app:downvote' image.id %}" method="post" role="form" class="form-inline float-left">
+            {% csrf_token %}
+            <input type="submit" value="-1">
+          </form>
+        </div>
+        
+
+        <!-- <a href="{% url 'app:upvote' image.id %}">Upvote</a>
+        <a href="{% url 'app:downvote' image.id %}">Downvote</a> -->
       </div>
       <h2>{{ image.title }}</h2>
       <img class="app-fit" src="{{image.url}}" alt=""/>
@@ -14,6 +30,10 @@
       <h3>Description</h3>
       <p>{{ image.description|linebreaksbr }}</p>
       <h3>Comments</h3>
+
+      <!-- <a href="http://localhost:8000/images/1/upvote">Upvote image1</a>
+      <a href="http://localhost:8000/images/1/downvote">Downvote image1</a> -->
+
       {% for comment in comments %}
         <div class="border comment">
           

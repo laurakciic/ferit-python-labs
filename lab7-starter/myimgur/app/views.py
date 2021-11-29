@@ -36,3 +36,16 @@ def comment(request, image_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('app:detail', args=(image.id,)))
 
+def upvote(request, image_id):
+    image = get_object_or_404(Image,pk=image_id)
+    if request.method == "POST":
+        image.upvotes += 1
+        image.save()
+    return HttpResponseRedirect(reverse('app:detail', args=(image.id,)))
+
+def downvote(request, image_id):
+    image = get_object_or_404(Image,pk=image_id)
+    if request.method == "POST":
+        image.downvotes += 1
+        image.save()
+    return HttpResponseRedirect(reverse('app:detail', args=(image.id,)))

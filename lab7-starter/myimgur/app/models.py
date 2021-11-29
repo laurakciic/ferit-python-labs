@@ -29,7 +29,7 @@ class Image(TimeStamped):
         return self.title
 
     def comments_count(self):
-        return image.comment_set.count()
+        return self.comment_set.count()
 
     def votes(self):
         return self.upvotes - self.downvotes

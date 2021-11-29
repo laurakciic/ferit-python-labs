@@ -20,3 +20,9 @@
   background-size: cover;
   height: 20vh;
 }
+
+.vote-score {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
