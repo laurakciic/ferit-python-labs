@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import JsonResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Image, Comment
@@ -20,6 +20,25 @@ def detail(request, image_id):
 def about(request):
     context = {}
     return render(request, 'app/about.html', context)
+
+def create_image(request):
+    try:
+        image = Image(
+            url = request.POST['image_url'],
+            title = request.POST['image_title'],
+            pub_date =request.POST['pub_date']    
+        )
+        image.save()
+    except (KeyError, Comment.DoesNotExist):
+        # Redisplay the comment posting form.
+        return render(request, 'app/new.html', {
+            'error_message': "Posting failed!",
+        })
+    else:
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
+        return HttpResponseRedirect(reverse('app:detail', args=(image.id,))) 
 
 def comment(request, image_id):
     image = get_object_or_404(Image, pk=image_id)

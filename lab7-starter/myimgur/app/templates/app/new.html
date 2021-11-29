@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1>Add new Image</h1>
+    <form action="{% url 'app:new' %}" method="post" class="border">
+      {% csrf_token %}
+      <p>
+        <label for="image_title">Title </label><br />
+        <input type="text" name="image_title" id="image_title" value="" />
+      </p>
+      <p>
+        <label for="image_url">Url </label><br />
+        <input type="text" name="image_url" id="image_url" value="" />
+      </p>
+      <p>
+        <label for="pub_date">Pub Date </label><br />
+        <input type="datetime" name="pub_date" id="pub_date" value="" />
+      </p>
+      <form action="" method="post" role="form" class="form-inline float-left">
+        <input type="submit" value="Save" />
+      </form>
+    </form>
+  </div>
+</div>
+{% endblock %}

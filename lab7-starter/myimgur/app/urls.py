@@ -10,5 +10,5 @@ urlpatterns = [
     path('<int:image_id>/upvote', views.upvote, name='upvote'),
     path('<int:image_id>/downvote', views.downvote, name='downvote'),
     path('about', views.about, name="about"),
-    
+    path('new', views.create_image, name='new'),
     ]
