@@ -20,5 +20,6 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('images/', include('app.urls')),
+    # path('images/about/', views.about, name='about'),
     path('', views.index, name='index'), 
 ]

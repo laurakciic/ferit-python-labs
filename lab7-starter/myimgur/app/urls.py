@@ -9,4 +9,6 @@ urlpatterns = [
     path('<int:image_id>/comment', views.comment, name='comment'),
     path('<int:image_id>/upvote', views.upvote, name='upvote'),
     path('<int:image_id>/downvote', views.downvote, name='downvote'),
-]
+    path('about', views.about, name="about"),
+    
+    ]

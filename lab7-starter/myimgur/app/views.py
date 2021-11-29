@@ -17,6 +17,10 @@ def detail(request, image_id):
               }
     return render(request, 'app/detail.html', context)
 
+def about(request):
+    context = {}
+    return render(request, 'app/about.html', context)
+
 def comment(request, image_id):
     image = get_object_or_404(Image, pk=image_id)
     try:
