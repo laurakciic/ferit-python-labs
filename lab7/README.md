@@ -1,5 +1,11 @@
 # Lab 7
 
+Notes:
+- Django prefers classes for forms and then html for forms to be dinamically generated 
+  - difference in comparison to other frameworks where forms are tipically manually written 
+- in Django we can control forms really good from the code itself
+  - which then allows validations which in Django are performed at the level of forms
+
 Tutorial: 
 
 - Enable user login/signup

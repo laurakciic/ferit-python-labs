@@ -1,5 +1,8 @@
 {% extends 'app/base.html' %}
 
+<!-- css klase dodane u app.css
+- npr u 14.liniji na sliku dodajemo fit kako bi stala u 6 kolona odredene za taj container (linija 9) -->
+
 {% block content %}
 <div class="container">
   <div class="row">
@@ -12,7 +15,10 @@
     </div>
     <div class="col-md-6">
       <h3>Description</h3>
+      <!-- django template engine omogucuje filtere 
+      - linebreaksbr filter ce svaki \n u tekstu pretvoriti u br element (novi red) -->
       <p>{{ image.description|linebreaksbr }}</p>
+      <!-- ispisivanje podataka za komentare -->
       <h3>Comments</h3>
       {% for comment in comments %}
         <div class="border comment">
@@ -29,6 +35,7 @@
       <h2>Post a comment</h2>
       {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
+      <!-- forma za submit komentara -->
       <form action="{% url 'app:comment' image.id %}" method="post" class="border">
         {% csrf_token %}
         <p>
