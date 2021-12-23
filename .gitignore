@@ -3,4 +3,4 @@
 /lab6/django/
 /lab7/django/
 __pycache__/
- *.pyc
+*.pyc
