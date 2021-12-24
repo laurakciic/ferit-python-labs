@@ -31,6 +31,13 @@
             
             <p class="red">
               Author: {{ comment.author }} ({{comment.created_at}})
+
+              {% if comment.isNotApproved %}
+                <a href="{% url 'app:approve_comment' image.id comment.id %}">
+                  <button>Approve</button>
+                </a>
+              {% endif %}
+
             </p>
             <p class="secondary">
               {{ comment.text }}
