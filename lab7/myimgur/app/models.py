@@ -51,6 +51,7 @@ class Comment(TimeStamped):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)  
     text = models.TextField(blank=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    approved = models.BooleanField(default=False)   # error when passing required=False
 
     def __str__(self):
         return self.text[:80]
