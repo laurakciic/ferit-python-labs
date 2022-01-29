@@ -18,10 +18,12 @@
             <div class="date">
               <p class="red">
               Published: {{ image.pub_date }}; By: {{ image.user }}; Comments: {{ image.comment_set.count }}; 
+
               {% if user == image.user or user.is_superuser %}
-                <a href="{% url 'app:edit_image' image.id %}">Edit</a> | 
+                <a href="{% url 'app:edit_image' image.id %}"> Edit </a> | 
                 {% include "includes/delete_image_link.html" with image=image %}
               {% endif %}
+              
               </p>
             </div>
             {% include "includes/vote_buttons.html" with image=image vote=vote %}
