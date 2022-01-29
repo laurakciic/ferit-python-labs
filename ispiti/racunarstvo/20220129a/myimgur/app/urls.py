@@ -12,6 +12,7 @@ urlpatterns = [
     path('<int:image_id>/upvote', views.upvote, name='upvote'),
     path('<int:image_id>/downvote', views.downvote, name='downvote'),
     path('new', views.create_image, name="create_image"),
+    path('random', views.random_image, name="random_image"),
     path('<int:image_id>/edit', views.update_image, name="edit_image"),
     path('<int:image_id>/delete', views.delete_image, name="delete_image"),
     

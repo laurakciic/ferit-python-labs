@@ -61,6 +61,9 @@ def update_image(request, image_id):
     context = { 'form':form, 'action':'update'}
     return render(request, 'app/create_image.html', context)
 
+def random_image(request, image_id):
+    image = random.choice( Image.objects.all() )
+    return HttpResponseRedirect(reverse('app:detail', args=(image_id,)))
 
 def comment(request, image_id):
     if request.method == 'POST' and request.user.is_authenticated:
