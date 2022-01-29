@@ -1,0 +1,13 @@
+<div>
+          <form action="{% url 'app:upvote' image.id %}" method="POST" role="form" class="form-inline float-left">
+              {% csrf_token %}
+              <input type="submit" value="+" class="btn {{ vote.upvote|yesno:'btn-success,btn-primary' }}"/>
+          </form>
+
+          <span class="vote-score float-left">{{ image.vote_score }}</span>
+
+          <form action="{% url 'app:downvote' image.id %}" method="POST" role="form" class="form-inline float-left">
+            {% csrf_token %}
+            <input type="submit" value="-" class="btn {{ vote.downvote|yesno:'btn-danger,btn-primary' }}"/>
+          </form>
+        </div>
