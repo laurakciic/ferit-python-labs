@@ -1,5 +1,32 @@
 # Lab 7
 
+Starting point:
+```
+git clone https://gitlab.com/kovaciclaura/se_labs.git
+```
+```
+git config user.name "kovaciclaura"
+git config user.email "laurakciic@gmail.com"
+```
+```
+cd se_labs
+cd lab7
+cd myimgur
+```
+```
+python -m venv django
+```
+```
+source django/Scripts/activate
+```
+```
+pip install -r requirements.txt
+```
+```
+winpty python manage.py runserver
+```
+
+
 Notes:
 - Django prefers classes for forms and then html for forms to be dinamically generated 
   - difference in comparison to other frameworks where forms are tipically manually written 
