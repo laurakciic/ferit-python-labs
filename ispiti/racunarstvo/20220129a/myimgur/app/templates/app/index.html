@@ -17,7 +17,16 @@
           <div class="col-md-10">
             <div class="date">
               <p class="red">
-              Published: {{ image.pub_date }}; By: {{ image.user }}; Comments: {{ image.comment_set.count }}; 
+              Published: {{ image.pub_date }}; 
+              
+              {% if image.user.is_superuser %} 
+              <span style="font-weight: bold; color: blue">By: {{ image.user.username }};</span> 
+              
+              {% else %} 
+              <span style="color: black">By: {{ image.user.username }};</span> 
+              {% endif %} 
+              
+              Comments: {{ image.comment_set.count }}; 
 
               {% if user == image.user or user.is_superuser %}
                 <a href="{% url 'app:edit_image' image.id %}"> Edit </a> | 
