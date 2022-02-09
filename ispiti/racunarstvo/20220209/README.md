@@ -3,6 +3,7 @@
 
 ## NAPOMENE
 
+### Pazite na `git config`, postavite svoje ime i email prije commitanja
 
 - Svaki zadatak riješiti i spremiti u vlastiti commit, nakon
 rješavanja ispita pushati sve na svoj repozitorij
