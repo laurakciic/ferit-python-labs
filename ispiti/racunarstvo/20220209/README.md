@@ -1,4 +1,4 @@
-# Pismeni ispit 29.01.2022.
+# Pismeni ispit 09.02.2022.
 
 
 ## NAPOMENE
