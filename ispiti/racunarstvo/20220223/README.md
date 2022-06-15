@@ -1,4 +1,4 @@
-# Pismeni ispit 09.02.2022.
+# Pismeni ispit 23.02.2022.
 
 
 ## NAPOMENE
@@ -20,7 +20,7 @@ rješavanja ispita pushati sve na svoj repozitorij
 
 ## Zadaci
 
-### 1. Pokrenuti projekt (3boda)
+### 1. Pokrenuti projekt (2boda)
 
 - kreirati virtualno okruženje
 - aktivirati ga
@@ -37,15 +37,15 @@ rješavanja ispita pushati sve na svoj repozitorij
   - password: `asdfasdf.1A`
 
 
-### 2. Premjestiti image metadata (3boda) 
+### 2. Premjestiti image metadata (2boda) 
 
-- Izmjeniti izgleda podataka o pojedinom imageu na index stranici da bude kao
+- Izmjeniti izgled podataka o pojedinom imageu na index stranici da bude kao
   na slici:
 
 ![slika](https://imgur.com/vtEraDy.png)
 
 
-### 3. Prebaciti 'Submit new image' u navbar (4 boda)
+### 3. Prebaciti 'Submit new image' u navbar (3 boda)
 
 - Na `index` stranici treba maknuti 'Submit new image' link i treba ga
   prebaciti u navigaciju s lijeve strane, pored 'Home'
@@ -57,14 +57,23 @@ rješavanja ispita pushati sve na svoj repozitorij
     je objavio običan user
 - Koristiti css klase
 
-### 5. Dodaj 'Moje slike' stranicu (6 bodova)
+
+### 5. Random image (4 boda)
+
+- U navbar dodati tipku `Random` koja će usmjeravati na `/images/random`
+- dodati rutu za `/images/random` i usmjeriti ju u *view*
+- View treba uzeti random sliku iz baze i napraviti `HttpResponseRedirect` na tu
+  sliku
+- random sliku iz baze možete najlakše povući sa: 
+  - `image = random.choice( Image.objects.all() )`
+
+
+### 6. Dodaj 'Moje slike' stranicu (5 bodova)
 
 - Dodati u navigaciju pored tipke za Logout link 'My images'
 - Link će voditi na novi view koji treba prikazati sve slike ulogiranog
   korisnika
   - potrebno je postaviti novu rutu za usmjeravanje u view
-  - nije potrebno kreirati novi template, možete jednostavno renderirati index
+  - ne raditi novi template, možete jednostavno renderirati index
     template, ali je potrebno uzeti slike samo od ulogiranog korisnika
 - Ako nije ulogiran korisnik, 'My images' link se ne prikazuje
-
-
