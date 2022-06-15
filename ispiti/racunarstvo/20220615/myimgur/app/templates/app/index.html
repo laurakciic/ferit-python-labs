@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-10">
+      {% if user.is_authenticated %}
+        <p><a href="{% url 'app:create_image' %}">Submit new image</a></p>
+      {% endif %}
+      </div>
+    </div>
+    {% for image,vote in images_with_votes %}
+      
+        <div class="row">
+          <div class="col-md-2">
+            <img class="app-fit" src="{{image.url}}" alt=""/>
+          </div>
+          <div class="col-md-10">
+            <div class="date">
+              <p class="red">
+              Published: {{ image.pub_date }}; Author: {{ image.user.username }};  Comments: {{ image.comment_set.count }}; 
+              {% if user == image.user or user.is_superuser %}
+                <a href="{% url 'app:edit_image' image.id %}">Edit</a> | 
+                {% include "includes/delete_image_link.html" with image=image %}
+              {% endif %}
+              </p>
+            </div>
+            {% include "includes/vote_buttons.html" with image=image vote=vote %}
+            <h2><a href="{% url 'app:detail' image.id %}">{{ image.title }}</a></h2>
+            <p>{{ image.description|linebreaksbr }}</p>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
