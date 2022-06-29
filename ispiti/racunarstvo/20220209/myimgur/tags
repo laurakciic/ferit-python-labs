@@ -1,0 +1,216 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	imgur/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+AUTH_PASSWORD_VALIDATORS	imgur/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+AccountsConfig	accounts/apps.py	/^class AccountsConfig(AppConfig):$/;"	c
+AppConfig	app/apps.py	/^class AppConfig(AppConfig):$/;"	c
+BASE_DIR	imgur/settings.py	/^BASE_DIR = Path(__file__).resolve().parent.parent$/;"	v
+Comment	app/models.py	/^class Comment(TimeStamped):$/;"	c
+CommentForm	app/forms.py	/^class CommentForm(ModelForm):$/;"	c
+CommentInline	app/admin.py	/^class CommentInline(admin.StackedInline):$/;"	c
+DATABASES	imgur/settings.py	/^DATABASES = {$/;"	v
+DEBUG	imgur/settings.py	/^DEBUG = True$/;"	v
+INSTALLED_APPS	imgur/settings.py	/^INSTALLED_APPS = [$/;"	v
+Image	app/models.py	/^class Image(TimeStamped):$/;"	c
+ImageAdmin	app/admin.py	/^class ImageAdmin(admin.ModelAdmin):$/;"	c
+ImageForm	app/forms.py	/^class ImageForm(ModelForm):$/;"	c
+LANGUAGE_CODE	imgur/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LOGIN_REDIRECT_URL	imgur/settings.py	/^LOGIN_REDIRECT_URL = '\/'$/;"	v
+LOGOUT_REDIRECT_URL	imgur/settings.py	/^LOGOUT_REDIRECT_URL = '\/'/;"	v
+Like	app/models.py	/^class Like(TimeStamped):$/;"	c
+MIDDLEWARE	imgur/settings.py	/^MIDDLEWARE = [$/;"	v
+Meta	app/forms.py	/^    class Meta:$/;"	c	class:CommentForm
+Meta	app/forms.py	/^    class Meta:$/;"	c	class:ImageForm
+Meta	app/models.py	/^    class Meta:$/;"	c	class:Like
+Meta	app/models.py	/^    class Meta:$/;"	c	class:TimeStamped
+Meta	app/models.py	/^    class Meta:$/;"	c	class:Vote
+Migration	app/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0002_image_title.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0003_auto_20201130_1344.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0004_auto_20201211_1345.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0005_auto_20201211_1604.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0006_remove_comment_user.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0007_comment_user.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0008_comment_approved.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0009_auto_20201213_1622.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0010_image_user.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0011_like.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0012_auto_20201214_1300.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0013_auto_20201214_1304.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0014_auto_20201214_1305.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	app/migrations/0015_comment_likecount.py	/^class Migration(migrations.Migration):$/;"	c
+ROOT_URLCONF	imgur/settings.py	/^ROOT_URLCONF = 'imgur.urls'$/;"	v
+SECRET_KEY	imgur/settings.py	/^SECRET_KEY = '%x$ut9o0sb!wjz$naizj8xp1*fdx!1881q9&s)1^m*y3(_*d%%'$/;"	v
+STATIC_URL	imgur/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+SignUpView	accounts/views.py	/^class SignUpView(generic.CreateView):$/;"	c
+TEMPLATES	imgur/settings.py	/^TEMPLATES = [$/;"	v
+TIME_ZONE	imgur/settings.py	/^TIME_ZONE = 'UTC'$/;"	v
+TimeStamped	app/models.py	/^class TimeStamped(models.Model):$/;"	c
+USE_I18N	imgur/settings.py	/^USE_I18N = True$/;"	v
+USE_L10N	imgur/settings.py	/^USE_L10N = True$/;"	v
+USE_TZ	imgur/settings.py	/^USE_TZ = True$/;"	v
+Vote	app/models.py	/^class Vote(TimeStamped):$/;"	c
+WSGI_APPLICATION	imgur/settings.py	/^WSGI_APPLICATION = 'imgur.wsgi.application'$/;"	v
+__str__	app/models.py	/^    def __str__(self) :$/;"	m	class:Vote	file:
+__str__	app/models.py	/^    def __str__(self):$/;"	m	class:Comment	file:
+__str__	app/models.py	/^    def __str__(self):$/;"	m	class:Image	file:
+abstract	app/models.py	/^        abstract = True$/;"	v	class:TimeStamped.Meta
+app-fit	app/static/app/css/app.css	/^.app-fit {$/;"	c
+app_name	accounts/urls.py	/^app_name = 'accounts'$/;"	v
+app_name	app/urls.py	/^app_name = 'app'$/;"	v
+application	imgur/asgi.py	/^application = get_asgi_application()$/;"	v
+application	imgur/wsgi.py	/^application = get_wsgi_application()$/;"	v
+approve	app/models.py	/^    def approve(self):$/;"	m	class:Comment
+approve	app/views.py	/^def approve(request, comment_id):$/;"	f
+approved	app/models.py	/^    approved = models.BooleanField(null=False, default=False)$/;"	v	class:Comment
+author	app/models.py	/^    def author(self):$/;"	m	class:Comment
+comment	app/models.py	/^    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)$/;"	v	class:Like
+comment	app/static/app/css/app.css	/^.comment {$/;"	c
+comment	app/views.py	/^def comment(request, image_id):$/;"	f
+comments_count	app/models.py	/^    def comments_count(self):$/;"	m	class:Image
+constraint	app/migrations/0004_auto_20201211_1345.py	/^            constraint=models.UniqueConstraint(fields=('image', 'user'), name='user_vote'),$/;"	v	class:Migration
+constraint	app/migrations/0012_auto_20201214_1300.py	/^            constraint=models.UniqueConstraint(fields=('user', 'comment'), name='user_like'),$/;"	v	class:Migration
+constraints	app/models.py	/^        constraints= [$/;"	v	class:Vote.Meta
+constraints	app/models.py	/^        constraints=[$/;"	v	class:Like.Meta
+content	app/static/app/css/app.css	/^.content p.red {$/;"	c
+create_image	app/views.py	/^def create_image(request):$/;"	f
+created_at	app/models.py	/^    created_at = models.DateTimeField(editable=False)$/;"	v	class:TimeStamped
+delete_image	app/views.py	/^def delete_image(request, image_id):$/;"	f
+dependencies	app/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0002_image_title.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0003_auto_20201130_1344.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0004_auto_20201211_1345.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0005_auto_20201211_1604.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0006_remove_comment_user.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0007_comment_user.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0008_comment_approved.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0009_auto_20201213_1622.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0010_image_user.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0011_like.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0012_auto_20201214_1300.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0013_auto_20201214_1304.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0014_auto_20201214_1305.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	app/migrations/0015_comment_likecount.py	/^    dependencies = [$/;"	v	class:Migration
+description	app/models.py	/^    description = models.TextField(blank=True)$/;"	v	class:Image
+detail	app/views.py	/^def detail(request, image_id):$/;"	f
+downvote	app/models.py	/^    def downvote(self):$/;"	m	class:Vote
+downvote	app/views.py	/^def downvote(request, image_id):$/;"	f
+downvotes	app/models.py	/^    downvotes = models.IntegerField(default=0)$/;"	v	class:Image
+extra	app/admin.py	/^    extra = 0$/;"	v	class:CommentInline
+field	app/migrations/0002_image_title.py	/^            field=models.CharField(default='CHANGEME', max_length=128, unique=True),$/;"	v	class:Migration
+field	app/migrations/0003_auto_20201130_1344.py	/^            field=models.IntegerField(default=0),$/;"	v	class:Migration
+field	app/migrations/0005_auto_20201211_1604.py	/^            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='auth.user'),$/;"	v	class:Migration
+field	app/migrations/0007_comment_user.py	/^            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='auth.user'),$/;"	v	class:Migration
+field	app/migrations/0008_comment_approved.py	/^            field=models.BooleanField(default=True),$/;"	v	class:Migration
+field	app/migrations/0009_auto_20201213_1622.py	/^            field=models.BooleanField(default=False),$/;"	v	class:Migration
+field	app/migrations/0010_image_user.py	/^            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='auth.user'),$/;"	v	class:Migration
+field	app/migrations/0012_auto_20201214_1300.py	/^            field=models.BooleanField(default=False),$/;"	v	class:Migration
+field	app/migrations/0013_auto_20201214_1304.py	/^            field=models.BooleanField(default=False),$/;"	v	class:Migration
+field	app/migrations/0015_comment_likecount.py	/^            field=models.IntegerField(default=0),$/;"	v	class:Migration
+fields	app/forms.py	/^        fields = ['text']/;"	v	class:CommentForm.Meta
+fields	app/forms.py	/^        fields = ['title', 'url', 'description', 'pub_date']$/;"	v	class:ImageForm.Meta
+fields	app/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	app/migrations/0004_auto_20201211_1345.py	/^            fields=[$/;"	v	class:Migration
+fields	app/migrations/0011_like.py	/^            fields=[$/;"	v	class:Migration
+form_class	accounts/views.py	/^    form_class = UserCreationForm$/;"	v	class:SignUpView
+image	app/models.py	/^    image = models.ForeignKey(Image, on_delete=models.CASCADE)$/;"	v	class:Comment
+image	app/models.py	/^    image = models.ForeignKey(Image, on_delete=models.CASCADE)$/;"	v	class:Vote
+index	app/views.py	/^def index(request):$/;"	f
+initial	app/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+inlines	app/admin.py	/^    inlines = [CommentInline]$/;"	v	class:ImageAdmin
+is_approved	app/models.py	/^    def is_approved(self):$/;"	m	class:Comment
+jumbotron	app/static/app/css/app.css	/^.jumbotron {$/;"	c
+like	app/views.py	/^def like(request, comment_id, likestatus):$/;"	f
+like_score	app/models.py	/^    def like_score(self):$/;"	m	class:Comment
+likebtn	app/views.py	/^def likebtn(request, comment_id, image_id):$/;"	f
+likecomment	app/models.py	/^    likecomment = models.BooleanField(null = False, default=False)$/;"	v	class:Like
+likecount	app/models.py	/^    likecount = models.IntegerField(default=0)$/;"	v	class:Comment
+main	manage.py	/^def main():$/;"	f
+model	app/admin.py	/^    model = Comment$/;"	v	class:CommentInline
+model	app/forms.py	/^        model = Comment$/;"	v	class:CommentForm.Meta
+model	app/forms.py	/^        model = Image$/;"	v	class:ImageForm.Meta
+model_name	app/migrations/0002_image_title.py	/^            model_name='image',$/;"	v	class:Migration
+model_name	app/migrations/0003_auto_20201130_1344.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0003_auto_20201130_1344.py	/^            model_name='image',$/;"	v	class:Migration
+model_name	app/migrations/0004_auto_20201211_1345.py	/^            model_name='vote',$/;"	v	class:Migration
+model_name	app/migrations/0005_auto_20201211_1604.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0006_remove_comment_user.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0007_comment_user.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0008_comment_approved.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0009_auto_20201213_1622.py	/^            model_name='comment',$/;"	v	class:Migration
+model_name	app/migrations/0010_image_user.py	/^            model_name='image',$/;"	v	class:Migration
+model_name	app/migrations/0012_auto_20201214_1300.py	/^            model_name='like',$/;"	v	class:Migration
+model_name	app/migrations/0013_auto_20201214_1304.py	/^            model_name='like',$/;"	v	class:Migration
+model_name	app/migrations/0014_auto_20201214_1305.py	/^            model_name='like',$/;"	v	class:Migration
+model_name	app/migrations/0015_comment_likecount.py	/^            model_name='comment',$/;"	v	class:Migration
+name	accounts/apps.py	/^    name = 'accounts'$/;"	v	class:AccountsConfig
+name	app/apps.py	/^    name = 'app'$/;"	v	class:AppConfig
+name	app/migrations/0001_initial.py	/^            name='Comment',$/;"	v	class:Migration
+name	app/migrations/0001_initial.py	/^            name='Image',$/;"	v	class:Migration
+name	app/migrations/0002_image_title.py	/^            name='title',$/;"	v	class:Migration
+name	app/migrations/0003_auto_20201130_1344.py	/^            name='downvotes',$/;"	v	class:Migration
+name	app/migrations/0003_auto_20201130_1344.py	/^            name='upvotes',$/;"	v	class:Migration
+name	app/migrations/0004_auto_20201211_1345.py	/^            name='Vote',$/;"	v	class:Migration
+name	app/migrations/0005_auto_20201211_1604.py	/^            name='author',$/;"	v	class:Migration
+name	app/migrations/0005_auto_20201211_1604.py	/^            name='user',$/;"	v	class:Migration
+name	app/migrations/0006_remove_comment_user.py	/^            name='user',$/;"	v	class:Migration
+name	app/migrations/0007_comment_user.py	/^            name='user',$/;"	v	class:Migration
+name	app/migrations/0008_comment_approved.py	/^            name='approved',$/;"	v	class:Migration
+name	app/migrations/0009_auto_20201213_1622.py	/^            name='approved',$/;"	v	class:Migration
+name	app/migrations/0010_image_user.py	/^            name='user',$/;"	v	class:Migration
+name	app/migrations/0011_like.py	/^            name='Like',$/;"	v	class:Migration
+name	app/migrations/0012_auto_20201214_1300.py	/^            name='like',$/;"	v	class:Migration
+name	app/migrations/0013_auto_20201214_1304.py	/^            name='like',$/;"	v	class:Migration
+name	app/migrations/0013_auto_20201214_1304.py	/^            name='likeInComment',$/;"	v	class:Migration
+name	app/migrations/0015_comment_likecount.py	/^            name='likecount',$/;"	v	class:Migration
+new_name	app/migrations/0014_auto_20201214_1305.py	/^            new_name='likecomment',$/;"	v	class:Migration
+old_name	app/migrations/0014_auto_20201214_1305.py	/^            old_name='likeInComment',$/;"	v	class:Migration
+operations	app/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0002_image_title.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0003_auto_20201130_1344.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0004_auto_20201211_1345.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0005_auto_20201211_1604.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0006_remove_comment_user.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0007_comment_user.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0008_comment_approved.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0009_auto_20201213_1622.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0010_image_user.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0011_like.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0012_auto_20201214_1300.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0013_auto_20201214_1304.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0014_auto_20201214_1305.py	/^    operations = [$/;"	v	class:Migration
+operations	app/migrations/0015_comment_likecount.py	/^    operations = [$/;"	v	class:Migration
+options	app/migrations/0001_initial.py	/^            options={$/;"	v	class:Migration
+options	app/migrations/0011_like.py	/^            options={$/;"	v	class:Migration
+preserve_default	app/migrations/0002_image_title.py	/^            preserve_default=False,$/;"	v	class:Migration
+preserve_default	app/migrations/0005_auto_20201211_1604.py	/^            preserve_default=False,$/;"	v	class:Migration
+preserve_default	app/migrations/0007_comment_user.py	/^            preserve_default=False,$/;"	v	class:Migration
+preserve_default	app/migrations/0010_image_user.py	/^            preserve_default=False,$/;"	v	class:Migration
+pub_date	app/models.py	/^    pub_date = models.DateTimeField('Published at')$/;"	v	class:Image
+save	app/models.py	/^    def save(self, *args, **kwargs):$/;"	m	class:TimeStamped
+success_url	accounts/views.py	/^    success_url = reverse_lazy('login')$/;"	v	class:SignUpView
+template_name	accounts/views.py	/^    template_name = 'registration\/signup.html'/;"	v	class:SignUpView
+text	app/models.py	/^    text = models.TextField(blank=False)$/;"	v	class:Comment
+title	app/models.py	/^    title = models.CharField(max_length=128, unique=True, blank=False)$/;"	v	class:Image
+update_image	app/views.py	/^def update_image(request, image_id):$/;"	f
+updated_at	app/models.py	/^    updated_at = models.DateTimeField(editable=False)$/;"	v	class:TimeStamped
+upvote	app/models.py	/^    upvote = models.BooleanField(null=False, default=True)$/;"	v	class:Vote
+upvote	app/views.py	/^def upvote(request, image_id):$/;"	f
+upvotes	app/models.py	/^    upvotes = models.IntegerField(default=0)$/;"	v	class:Image
+url	app/models.py	/^    url = models.CharField(max_length=512)$/;"	v	class:Image
+urlpatterns	accounts/urls.py	/^urlpatterns = [$/;"	v
+urlpatterns	app/urls.py	/^urlpatterns = [$/;"	v
+urlpatterns	imgur/urls.py	/^urlpatterns = [$/;"	v
+user	app/models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Comment
+user	app/models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Image
+user	app/models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Like
+user	app/models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Vote
+vote	app/views.py	/^def vote(request, image_id, upvote):$/;"	f
+vote-score	app/static/app/css/app.css	/^.vote-score{$/;"	c
+vote_by	app/models.py	/^    def vote_by(self,user):$/;"	m	class:Image
+vote_score	app/models.py	/^    def vote_score(self):$/;"	m	class:Image
+widgets	app/forms.py	/^        widgets = {$/;"	v	class:ImageForm.Meta

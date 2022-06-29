@@ -1,0 +1,9 @@
+                    <a href="#" id="delete_{{ image.id }}">Delete</a>
+                <form action="{% url 'app:delete_image' image.id %}" method="post" id="delete_form_{{image.id}}" class = "hidden">
+                    {% csrf_token %}
+                </form>
+                <script charset="utf-8">
+                    $(document).on('click', '#delete_{{image.id}}', function(){
+                    $('#delete_form_{{image.id}}').submit();
+                    });
+                </script>
