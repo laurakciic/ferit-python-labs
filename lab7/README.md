@@ -11,16 +11,16 @@ git config user.email "laurakciic@gmail.com"
 ```
 cd se_labs
 cd lab7
-cd myimgur
+cd myimgur                        // wasn't necessary atm of creating virutal env
 ```
 ```
-python -m venv django
+python -m venv django             // should be visible with ls command
 ```
 ```
 source django/Scripts/activate
 ```
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt   // here it's necessary to be in /myimgur
 ```
 ```
 winpty python manage.py runserver
