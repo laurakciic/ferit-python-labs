@@ -26,6 +26,23 @@ pip install -r requirements.txt   // here it's necessary to be in /myimgur
 winpty python manage.py runserver
 ```
 
+Don't forget to add virtual env and pycache files to gitignore, for example:
+```
+/lab3/pero
+/lab5/django/
+/lab6/django/
+/lab7/django/
+/lab7/myimgur/imgur/__pycache__
+/lab7/myimgur/app/__pycache__
+__pycache__/
+*.pyc
+```
+
+Add database to commit 
+```
+git add db.sqlite3
+```
+
 
 Notes:
 - Django prefers classes for forms and then html for forms to be dinamically generated 
