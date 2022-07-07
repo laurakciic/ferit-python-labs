@@ -1,8 +1,11 @@
 /lab3/pero
 /lab5/django/
 /lab6/django/
-/lab7/django/
+/lab7/myimgur/django/
 /lab7/myimgur/imgur/__pycache__
 /lab7/myimgur/app/__pycache__
 __pycache__/
-*.pyc
+**/__pycache__
+**.pyc
+*.py[cod]
+.django/
