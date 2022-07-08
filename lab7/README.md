@@ -9,6 +9,11 @@ git config user.name "kovaciclaura"
 git config user.email "laurakciic@gmail.com"
 ```
 ```
+git remote add upstream https://gitlab.com/levara/se_labs
+git fetch upstream master
+git merge upstream/master
+```
+```
 cd se_labs
 cd lab7
 cd myimgur                        // wasn't necessary atm of creating virutal env
@@ -36,6 +41,12 @@ Don't forget to add virtual env and pycache files to gitignore, for example:
 /lab7/myimgur/app/__pycache__
 __pycache__/
 *.pyc
+```
+
+Apply migrations (database changes)
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 Add database to commit 
