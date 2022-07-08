@@ -43,6 +43,12 @@ __pycache__/
 *.pyc
 ```
 
+Apply migrations (database changes)
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
 Add database to commit 
 ```
 git add db.sqlite3
