@@ -1,11 +1,19 @@
-.content p.red {
-  color: red;
+.content p.black {
+  color: black;
+
+  text-align: justify;
+  width: 100%;
 }
 
 .app-fit {
   height: auto;
   width: 100%;
   border: 1px solid black;
+}
+
+.app-fit img {
+  display: block;
+  margin: 0 auto;
 }
 
 .comment {

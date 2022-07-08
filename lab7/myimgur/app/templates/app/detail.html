@@ -15,6 +15,7 @@
       {% include "includes/vote_buttons.html" with image=image vote=vote %} 
 
       <h2>{{ image.title }}</h2>
+      <h2>price: {{ image.price }} kn</h2>
       <img class="app-fit" src="{{image.url}}" alt=""/>
     </div>
     <div class="col-md-6">
@@ -22,6 +23,9 @@
       <!-- django template engine omogucuje filtere 
       - linebreaksbr filter ce svaki \n u tekstu pretvoriti u br element (novi red) -->
       <p>{{ image.description|linebreaksbr }}</p>
+      <a href="{% url 'app:buy_image' image.id %}">
+        <button class="primary-btn">Buy this image</button>
+      </a>
       <!-- ispisivanje podataka za komentare -->
       
       {% if request.user.is_superuser %}

@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="row">   
+        <div class="col-md-12">
+            <img class="app-fit" src="{{ image.url }}" alt=""/>
+        </div>
+
+        <h2><a href="{% url 'app:detail' image.id %}">{{ image.title }}</a></h2>
+
+    </div>
+    <!-- submitat ce post request na isti url i uhvatit ce ga ista ova -->
+    <form method="post" accept-charset="utf-8">     <!-- akcija django.contrib.auth.urls koja ce obraditi ovu formu -->
+        {% csrf_token %}
+
+        <!-- renderiranje bs4_form.htmla, no buduci da je django template, moramo mu reci sta je form -->
+        <!-- jer taj include nema pristup kontekstu da zna tocno sta je form pa mu kazemo -->
+        <!-- form u tebi je ovaj form kojem imamo pristup iz konteksta (form=form) -->
+        {% include 'includes/bs4_form.html' with form=form %}
+
+        <div class="container">
+            <label for="firstName"><b>First name:   </b></label>
+            <input type="text" class="" placeholder="Enter your first name" name="firstName" required>
+            <br>
+            <label for="lastName"><b>Last name:   </b></label>
+            <input type="text" class="" placeholder="Enter your last name" name="lastName" required>
+            <br>
+            <label for="address"><b>Address:   </b></label>
+            <input type="text" class="" placeholder="Enter your address" name="address" required>
+            <br>
+        </div>
+
+        <div class="row">   
+            <div class="col-md-8 mx-auto">
+                <a href="{% url 'app:page' %}">
+                    <input type="submit" value="Buy" class="btn btn-primary">
+                </a>
+                
+            </div>
+        </div>
+    </form>
+{% endblock content %}

@@ -14,4 +14,6 @@ urlpatterns = [     # naziv viewa i naziv rute nije povezan!
     path('new', views.create_image, name="create_image"),           # (CRUD-C), putanja: localhost8000/images/new, app:create_image
     path('<int:image_id>/edit', views.update_image, name="edit_image"),         # (CRUD-U)
     path('<int:image_id>/delete', views.delete_image, name="delete_image"),     # (CRUD-D)
+    path('<int:image_id>/buy', views.buy_image, name="buy_image"),
+    path('thanks', views.page, name="page"),
 ]

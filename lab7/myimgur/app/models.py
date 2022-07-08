@@ -24,6 +24,7 @@ class Image(TimeStamped):
     pub_date = models.DateTimeField('Published at')
     upvotes = models.IntegerField(default=0)        #upvotes i downvotes dodani direktno u image
     downvotes = models.IntegerField(default=0)
+    price = models.IntegerField(default=500)
 
     def __str__(self):
         return self.title
@@ -93,3 +94,14 @@ class Vote(TimeStamped):
         
     def downvote(self):  # kad zelimo vidit jel nesto downvote (cisto da mozemo napisat if downvote umjesto if not upvote)
         return not self.upvote
+
+class Order(TimeStamped):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ForeignKey(Image, on_delete=models.CASCADE)
+    firstName = models.TextField(blank=False, max_length=128)
+    lastName = models.TextField(blank=False, max_length=128)
+    address = models.TextField(blank=False, max_length=255)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user.username} has bought {self.image.title}"

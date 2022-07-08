@@ -116,4 +116,13 @@ def downvote(request, image_id):
     if request.method == 'POST' and request.user.is_authenticated:
         vote(request, image_id, False)
     return HttpResponseRedirect(reverse('app:detail', args=(image_id,)))
-    
+
+def buy_image(request, image_id):
+    image = get_object_or_404(Image, pk=image_id)
+    context = {'image': image, }                                     # image je ovaj objekt sto se povlaci s get obj or 404
+    return render(request, 'app/buy_image.html', context)
+
+def page(request):
+    firstName = request.user
+    context = { 'firstName': firstName, }
+    return render(request, 'app/thanks.html', context)

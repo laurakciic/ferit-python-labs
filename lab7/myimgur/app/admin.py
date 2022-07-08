@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Image, Comment, Vote
+from .models import Image, Comment, Vote, Order
 
 class CommentInline(admin.StackedInline):
     model = Comment
@@ -13,3 +13,4 @@ class ImageAdmin(admin.ModelAdmin):
 admin.site.register(Image, ImageAdmin)
 admin.site.register(Comment)
 admin.site.register(Vote)
+admin.site.register(Order)
