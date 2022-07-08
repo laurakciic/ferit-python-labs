@@ -9,6 +9,11 @@ git config user.name "kovaciclaura"
 git config user.email "laurakciic@gmail.com"
 ```
 ```
+git remote add upstream https://gitlab.com/levara/se_labs
+git fetch upstream master
+git merge upstream/master
+```
+```
 cd se_labs
 cd lab7
 cd myimgur                        // wasn't necessary atm of creating virutal env
